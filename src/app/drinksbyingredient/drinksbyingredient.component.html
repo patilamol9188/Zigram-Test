@@ -1,0 +1,17 @@
+<h3>Drinks By Ingredient</h3>
+<select name="" id="" (change)="getDrinksDataByIngredient()" [(ngModel)]="ingredient">
+    <option [value]="ingredient.strIngredient1" *ngFor="let ingredient of ingredients">{{ingredient.strIngredient1}}</option>
+</select>
+<div style="margin-top: 20px;" class="row">
+    <ng-container *ngFor="let drink of drinks">
+        <div class="col-md-4" style="margin-bottom: 20px;">
+            
+                <img [src]="drink.strDrinkThumb" width="150" height="100"alt="">
+            
+            
+                <span style="margin:20px;text-align: center;">{{drink.strDrink}}</span>
+        
+        </div>
+    </ng-container>
+
+</div>

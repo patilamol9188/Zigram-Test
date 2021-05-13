@@ -1,0 +1,40 @@
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  </style>
+
+<h3>Drinks by name</h3>
+<div class="row" style="margin-bottom: 20px;">
+  
+    <input type="text" [(ngModel)]="name">
+    <button (click)="getDrinksData()" style="margin-left: 20px;">Search</button>
+ 
+
+</div>
+<table *ngIf="drinks">
+  <tr>
+    <th>Id</th>
+    <th>Drink</th>
+    <th>Tags</th>
+    <th>Category</th>
+    <th>Alcoholic</th>
+  </tr>
+  <tr *ngFor="let drink of drinks">
+    <td>{{drink.idDrink}}</td>
+    <td>{{drink.strDrink}}</td>
+    <td>{{drink.strTags}}</td>
+    <td>{{drink.strCategory}}</td>
+    <td>{{drink.strAlcoholic}}</td>
+  </tr>
+  
+</table>  
